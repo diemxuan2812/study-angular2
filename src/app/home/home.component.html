@@ -1,15 +1,5 @@
-<h1>Home nha</h1>
-<h3 *ngIf="showLineif">show or hide div h3</h3>
-<div [ngSwitch]="abc">
-  <h4 *ngSwitchCase="'red'">This is line red</h4>
-  <h4 *ngSwitchCase="'black'">This is line back</h4>
-  <h4 *ngSwitchCase="'yellow'">This is line yellow</h4>
-  <h4 *ngSwitchCase="'blue'">This is line blue</h4>
-  <h4 *ngSwitchDefault>This is line default</h4>
-</div>
-<ul>
-  <li *ngFor="let color of colors"> {{color}}</li>
-</ul>
-<div [ngClass]='{one:cone,two:ctwo}'>con cho con</div>
-<p [ngStyle]="{'font-style':style,'font-size':size}">con cho con hahah </p>
-<button (click)="toggle()">change style</button>
+
+<div>people {{name}}</div>
+<button [disabled]="voted" (click)="vote(true)">agree</button>
+<button [disabled]="voted" (click)="vote(false)">disgree</button>
+result: {{result}}

@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, Input, Output, EventEmitter} from '@angular/core';
+
 
 @Component({
   selector: 'app-home',
@@ -6,16 +7,18 @@ import {Component} from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  showLineif = true;
- public abc = 'blue';
- colors: string[] = ['red', 'blue', 'yellow'];
- cone = true;
- ctwo = true;
-  style = 'italic';
-  size = '30px';
-  toggle() {
-    this.cone = !this.cone;
-    this.ctwo = !this.ctwo;
+  @Input() name: string;
+  @Output() onVote = new EventEmitter<boolean>();
+  voted = false;
+  result;
+
+  setname(name: string) {
+    this.name = name;
   }
 
+  vote(agree: boolean) {
+    this.voted = true;
+    this.result = agree;
+    this.onVote.emit(agree);
+  }
 }
