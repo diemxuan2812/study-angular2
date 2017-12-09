@@ -10,3 +10,6 @@
 <ul>
   <li *ngFor="let color of colors"> {{color}}</li>
 </ul>
+<div [ngClass]='{one:cone,two:ctwo}'>con cho con</div>
+<p [ngStyle]="{'font-style':style,'font-size':size}">con cho con hahah </p>
+<button (click)="toggle()">change style</button>
