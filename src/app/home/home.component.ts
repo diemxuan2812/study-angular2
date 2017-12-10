@@ -1,4 +1,4 @@
-import {Component, Input, Output, EventEmitter} from '@angular/core';
+import {Component } from '@angular/core';
 
 
 @Component({
@@ -7,18 +7,4 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  @Input() name: string;
-  @Output() onVote = new EventEmitter<boolean>();
-  voted = false;
-  result;
-
-  setname(name: string) {
-    this.name = name;
-  }
-
-  vote(agree: boolean) {
-    this.voted = true;
-    this.result = agree;
-    this.onVote.emit(agree);
-  }
 }

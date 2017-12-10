@@ -1,6 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
-
-import {HomeComponent} from './home/home.component';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,20 +6,10 @@ import {HomeComponent} from './home/home.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app nha';
-  pepoles: string[] = ['Ms A', 'Ms B', 'Ms C', 'Ms D'];
-  agree = 0;
-  disgree = 0;
-@ViewChild(HomeComponent)
-private homeComponent: HomeComponent;
-  changeName() {
-    this.homeComponent.setname('change name in parent');
-  }
-  parentVote(agree: boolean) {
-    if (agree) {
-      this.agree++ ;
-    } else {
-      this.disgree++;
-    }
-  }
+  title = 'Hello app nha';
+  date = new Date();
+  percentNumber = 1.3495;
+  e = 2.7184;
+  object: Object = {foo: 'bar', bar: 'quz', nested: {xyz: 3, numbers: [1, 3, 5, 8, 7]}};
+  collections: number [] = [1, 4, 5, 6, 8];
 }

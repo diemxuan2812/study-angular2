@@ -1,6 +1,10 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<button (click)="changeName()">change name</button>
-<h1>Number agree{{agree}}</h1>
-<h1>Number disgree{{disgree}}</h1>
-<app-home  *ngFor="let pepole of pepoles" [name]="pepole" (onVote)="parentVote($event)"></app-home>
-
+<h1>{{title | uppercase}}</h1>
+<h1>{{title | lowercase}}</h1>
+<h1>{{date | date:'fullDate'}}</h1>
+<h1>{{percentNumber | percent:'4.3-5'}}</h1>
+<h1>{{e | number}}</h1>
+<pre>{{object | json}}</pre>
+<ul>
+  <li *ngFor="let collection of collections | slice:1:4">{{collection}}</li>
+</ul>
+<app-home></app-home>

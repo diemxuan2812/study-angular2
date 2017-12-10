@@ -5,11 +5,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent} from './home/home.component';
 
+import { ExponentialStrengthPipe} from './pipes/exponential-strength.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ExponentialStrengthPipe
   ],
   imports: [
     BrowserModule
